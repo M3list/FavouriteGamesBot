@@ -1,9 +1,10 @@
-﻿using FavouriteGamesBot.Bot.Router;
+﻿using FavouriteGamesBot.Bot;
+using FavouriteGamesBot.Bot.Router;
 using FavouriteGamesBot.Util;
 
-namespace FavouriteGamesBot.Bot.Service;
+namespace FavouriteGamesBot.Service;
 
-public class MainService
+public class StartMenuService
 {
     public BotMessage ProcessCommandStart(string textData, TransmittedData transmittedData)
     {

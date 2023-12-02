@@ -1,6 +1,7 @@
-﻿using FavouriteGamesBot.Bot.Router;
+﻿using FavouriteGamesBot.Bot;
+using FavouriteGamesBot.Bot.Router;
 
-namespace FavouriteGamesBot.Bot.Service;
+namespace FavouriteGamesBot.Service;
 
 public class ServiceManager
 {
@@ -9,12 +10,12 @@ public class ServiceManager
 
     public ServiceManager()
     {
-        MainService mainService = new MainService();
+        StartMenuService startMenuService = new StartMenuService();
 
         _methods =
             new Dictionary<string, Func<string, TransmittedData, BotMessage>>();
 
-        _methods[States.WaitingCommandStart] = mainService.ProcessCommandStart;
+        _methods[States.StartMenu.CommandStart] = startMenuService.ProcessCommandStart;
     }
 
     public BotMessage ProcessBotUpdate(string textData, TransmittedData transmittedData)

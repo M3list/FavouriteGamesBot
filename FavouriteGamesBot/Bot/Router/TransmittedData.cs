@@ -9,7 +9,7 @@ public class TransmittedData
     public TransmittedData(long chatId)
     {
         ChatId = chatId;
-        State = States.WaitingCommandStart;
+        State = States.StartMenu.CommandStart;
         DataStorage = new DataStorage();
     }
 }
