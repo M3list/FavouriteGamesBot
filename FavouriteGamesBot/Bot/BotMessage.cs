@@ -5,17 +5,17 @@ namespace FavouriteGamesBot.Bot;
 public class BotMessage
 {
     public string Text { get; }
-    public InlineKeyboardMarkup InlineKeyboardMarkup { get; }
+    public IReplyMarkup KeyboardMarkup { get; }
 
     public BotMessage(string text)
     {
         Text = text;
-        InlineKeyboardMarkup = null;
+        KeyboardMarkup = null;
     }
 
-    public BotMessage(string text, InlineKeyboardMarkup inlineKeyboardMarkup)
+    public BotMessage(string text, IReplyMarkup keyboardMarkup)
     {
         Text = text;
-        InlineKeyboardMarkup = inlineKeyboardMarkup;
+        KeyboardMarkup = keyboardMarkup;
     }
 }

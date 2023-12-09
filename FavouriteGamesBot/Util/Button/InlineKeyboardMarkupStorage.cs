@@ -10,8 +10,14 @@ public class InlineKeyboardMarkupStorage
         {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.MainMenu.CreateGameList.Name,
                 BotButtonsStorage.MainMenu.CreateGameList.CallBackData),
+        },
+        new[]
+        {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.MainMenu.Lists.Name,
-                BotButtonsStorage.MainMenu.Lists.CallBackData),
+                BotButtonsStorage.MainMenu.Lists.CallBackData)
+        },
+        new[]
+        {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.MainMenu.Recomendation.Name,
                 BotButtonsStorage.MainMenu.Recomendation.CallBackData)
         }

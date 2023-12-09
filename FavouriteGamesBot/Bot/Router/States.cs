@@ -18,7 +18,7 @@ public class StartMenu
 
 public class MainMenu
 {
-    public string WaitingClickOnInlineButtonInMenuMain { get; } = "WaitingClickOnInlineButtonInMenuMain";
+    public string ClickOnInlineButton { get; } = "ClickOnInlineButton";
 }
 
 public class ListMenu

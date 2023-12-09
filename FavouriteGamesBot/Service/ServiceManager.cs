@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using FavouriteGamesBot.Bot;
 using FavouriteGamesBot.Bot.Router;
+using FavouriteGamesBot.Util.Button;
+using FavouriteGamesBot.Util.String;
 
 namespace FavouriteGamesBot.Service;
 
@@ -22,6 +24,13 @@ public class ServiceManager
 
     public BotMessage ProcessBotUpdate(string textData, TransmittedData transmittedData)
     {
+        if (textData == SystemStringsStorage.CommandReset)
+        {
+            transmittedData.State = States.MainMenu.ClickOnInlineButton;
+            
+            return new BotMessage(DialogsStringsStorage.MainMenu, InlineKeyboardMarkupStorage.MainMenuChoose);
+        }
+
         Func<string, TransmittedData, BotMessage> serviceMethod = _methods[transmittedData.State];
         return serviceMethod.Invoke(textData, transmittedData);
     }

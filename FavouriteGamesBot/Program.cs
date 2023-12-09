@@ -1,5 +1,21 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using System.Threading.Tasks;
+using FavouriteGamesBot.Bot;
 
-using System;
+BotInitializer bot = new BotInitializer();
+bot.Start();
 
-Console.WriteLine("Hello, World!");
+TaskCompletionSource tcs = new TaskCompletionSource();
+
+AppDomain.CurrentDomain.ProcessExit += (_, _) =>
+{
+    bot.Stop();
+    Console.WriteLine("Bot stopped");
+    tcs.SetResult();
+};
+
+Console.WriteLine("Press CTRL+C to stop");
+
+await tcs.Task;
+
+Console.WriteLine("program finished");

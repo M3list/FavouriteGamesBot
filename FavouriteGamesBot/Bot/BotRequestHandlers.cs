@@ -66,11 +66,11 @@ public class BotRequestHandlers
                 await botClient.SendTextMessageAsync(
                     chatId: chatId,
                     text: botMessage.Text,
-                    replyMarkup: botMessage.InlineKeyboardMarkup,
+                    replyMarkup: botMessage.KeyboardMarkup,
                     cancellationToken: cancellationToken);
 
                 Console.WriteLine(
-                    $"ИСХОДЯЩЕЕ СОООБЩЕНИЕ chatId = {chatId}; text = {botMessage.Text.Replace("\n", " ")}; Keyboard = {getKeyboardAsString(botMessage.InlineKeyboardMarkup)}");
+                    $"ИСХОДЯЩЕЕ СОООБЩЕНИЕ chatId = {chatId}; text = {botMessage.Text.Replace("\n", " ")}; Keyboard = {getKeyboardAsString(botMessage.KeyboardMarkup)}");
             }
         }
         catch (Exception e)
@@ -99,20 +99,34 @@ public class BotRequestHandlers
         return Task.CompletedTask;
     }
 
-    private string getKeyboardAsString(InlineKeyboardMarkup inlineKeyboardMarkup)
+    private string getKeyboardAsString(IReplyMarkup keyboardMarkup)
     {
-        if (inlineKeyboardMarkup == null)
+        if (keyboardMarkup == null)
         {
             return "Клавиатуры в данном сообщении нет";
         }
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        foreach (var row in inlineKeyboardMarkup.InlineKeyboard)
+        if (keyboardMarkup is InlineKeyboardMarkup)
         {
-            stringBuilder.Append(row.ToList()[0].Text + ";");
-        }
+            InlineKeyboardMarkup inlineKeyboardMarkup = keyboardMarkup as InlineKeyboardMarkup;
 
+            foreach (var row in inlineKeyboardMarkup.InlineKeyboard)
+            {
+                stringBuilder.Append(row.ToList()[0].Text + ";");
+            }
+        }
+        else if (keyboardMarkup is ReplyKeyboardMarkup)
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = keyboardMarkup as ReplyKeyboardMarkup;
+
+            foreach (var row in replyKeyboardMarkup.Keyboard)
+            {
+                stringBuilder.Append(row.ToList()[0].Text + ";");
+            }
+        }
+        
         return stringBuilder.ToString();
     }
 }
