@@ -4,5 +4,5 @@ namespace FavouriteGamesBot.Db.Repositories.Interfaces;
 
 public interface IGamesListsRepository
 {
-    List<GameList> GetGamesListsByChatId(long chatId);
+    List<GamesList> GetGamesListsByChatId(long chatId);
 }

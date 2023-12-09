@@ -10,7 +10,7 @@ namespace FavouriteGamesBot.Bot;
 
 public class BotRequestHandlers
 {
-      private ChatsRouter _chatsRouter;
+    private ChatsRouter _chatsRouter;
 
     public BotRequestHandlers()
     {

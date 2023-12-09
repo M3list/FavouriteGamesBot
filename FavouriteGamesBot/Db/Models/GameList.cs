@@ -1,14 +1,14 @@
 namespace FavouriteGamesBot.Db.Models;
 
-public class GameList{
-    public int Id {get; set;}
+public partial class GamesList
+{
+    public int Id { get; set; }
 
-    public int ChatId {get; set;}
+    public string Title { get; set; }
 
-    public string ListName {get; set;}= null!;
+    public long ChatId { get; set; }
 
-    public string ListPrivacy {get; set;}=null!;
-    
-    public virtual ICollection<Game> Games {get; set;}=new List<Game>();
-    
+    public bool IsPrivate { get; set; }
+
+    public virtual ICollection<Game> Games { get; set; } = new List<Game>();
 }

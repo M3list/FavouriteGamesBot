@@ -5,8 +5,8 @@ public static class BotButtonsStorage
     public static MainMenu MainMenu { get; } = new();
     public static ListMenu ListMenu { get; } = new();
     public static GameMenu GameMenu { get; } = new();
-    public static Recomendation Recomendation {get;}=new();
-    public static SubmitData SubmitData {get;}=new();
+    public static Recomendation Recomendation { get; } = new();
+    public static SubmitData SubmitData { get; } = new();
     public static System System { get; } = new();
 }
 
@@ -34,7 +34,6 @@ public class ListMenu
     public BotButton List { get; } = new("Список", "ListBtn");
     public BotButton Game { get; } = new("IT-PARK", "Game");
     public BotButton BackToList { get; } = new("Назад", "BackToList");
-
 }
 
 public class GameMenu
@@ -44,14 +43,15 @@ public class GameMenu
     public BotButton BackToListOfGames { get; } = new("Назад", "BackToListOfGames");
 }
 
-public class Recomendation{
+public class Recomendation
+{
     public BotButton Game { get; } = new("Игра", "Game");
-
 }
 
-public class SubmitData{
-    public BotButton CorrectData {get;}=new("Да","CorrectData");
-    public BotButton NotCorrectData {get;}=new("Нет","NotCorrectData");
+public class SubmitData
+{
+    public BotButton CorrectData { get; } = new("Да", "CorrectData");
+    public BotButton NotCorrectData { get; } = new("Нет", "NotCorrectData");
 }
 
 public class System

@@ -15,7 +15,7 @@ public class BotInitializer
         _botClient = new TelegramBotClient(SystemStringsStorage.TelegramToken);
         _cancellationTokenSource = new CancellationTokenSource();
     }
-    
+
     public void Start()
     {
         ReceiverOptions receiverOptions = new ReceiverOptions
@@ -31,7 +31,6 @@ public class BotInitializer
             receiverOptions,
             _cancellationTokenSource.Token
         );
-        
     }
 
     public void Stop()

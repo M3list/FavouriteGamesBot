@@ -47,7 +47,8 @@ public class InlineKeyboardMarkupStorage
         }
     });
 
-    public static InlineKeyboardMarkup ListOfGamesChoose = new(new[]{
+    public static InlineKeyboardMarkup ListOfGamesChoose = new(new[]
+    {
         new[]
         {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.ListMenu.Game.Name,
@@ -57,7 +58,8 @@ public class InlineKeyboardMarkupStorage
         }
     });
 
-    public static InlineKeyboardMarkup GameMenuChoose = new(new[]{
+    public static InlineKeyboardMarkup GameMenuChoose = new(new[]
+    {
         new[]
         {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.GameMenu.ChangeGame.Name,
@@ -80,8 +82,10 @@ public class InlineKeyboardMarkupStorage
         }
     });
 
-    public static InlineKeyboardMarkup RecomentaionGames = new(new[]{
-        new[]{
+    public static InlineKeyboardMarkup RecomentaionGames = new(new[]
+    {
+        new[]
+        {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.Recomendation.Game.Name,
                 BotButtonsStorage.Recomendation.Game.CallBackData),
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.System.ButtonBack.Name,
@@ -89,8 +93,10 @@ public class InlineKeyboardMarkupStorage
         }
     });
 
-    public static InlineKeyboardMarkup RecomentaionGameMenu = new(new[]{
-        new[]{
+    public static InlineKeyboardMarkup RecomentaionGameMenu = new(new[]
+    {
+        new[]
+        {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.Recomendation.Game.Name,
                 BotButtonsStorage.Recomendation.Game.CallBackData),
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.System.ButtonBack.Name,
@@ -98,16 +104,21 @@ public class InlineKeyboardMarkupStorage
         }
     });
 
-    public static InlineKeyboardMarkup SubmitDataChoose = new(new[]{
-        new[]{
+    public static InlineKeyboardMarkup SubmitDataChoose = new(new[]
+    {
+        new[]
+        {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.SubmitData.CorrectData.Name,
                 BotButtonsStorage.SubmitData.CorrectData.CallBackData),
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.SubmitData.NotCorrectData.Name,
                 BotButtonsStorage.SubmitData.NotCorrectData.CallBackData)
         }
     });
-    public static InlineKeyboardMarkup ChooseListToAddGame = new(new[]{
-        new[]{
+
+    public static InlineKeyboardMarkup ChooseListToAddGame = new(new[]
+    {
+        new[]
+        {
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.ListMenu.List.Name,
                 BotButtonsStorage.ListMenu.List.CallBackData),
             InlineKeyboardButton.WithCallbackData(BotButtonsStorage.SubmitData.NotCorrectData.Name,
