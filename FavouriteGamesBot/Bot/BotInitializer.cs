@@ -1,4 +1,5 @@
-﻿using Telegram.Bot;
+﻿using FavouriteGamesBot.Util.String;
+using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types.Enums;
 
@@ -11,7 +12,7 @@ public class BotInitializer
 
     public BotInitializer()
     {
-        _botClient = new TelegramBotClient("6949655126:AAFsR8q0Gt3VKyrJx-G_n78edKGcNXM6shM");
+        _botClient = new TelegramBotClient(SystemStringsStorage.TelegramToken);
         _cancellationTokenSource = new CancellationTokenSource();
     }
     

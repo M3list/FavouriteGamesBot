@@ -1,4 +1,4 @@
-﻿namespace FavouriteGamesBot.Util;
+﻿namespace FavouriteGamesBot.Util.Button;
 
 public class BotButton
 {

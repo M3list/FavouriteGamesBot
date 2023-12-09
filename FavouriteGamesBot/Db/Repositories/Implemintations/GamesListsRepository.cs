@@ -8,7 +8,7 @@ public class GamesListsRepository : IGamesListsRepository
 {
     private FgbDbContext _dbContext;
 
-    public List<GamesList> GetGamesListsByChatId(long chatId)
+    public List<GameList> GetGamesListsByChatId(long chatId)
     {
         return _dbContext.GamesLists.Where(x => x.ChatId == chatId).ToList();
     }

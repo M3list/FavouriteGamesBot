@@ -1,0 +1,1 @@
+namespace FavouriteGamesBot.Db.DbConnector;
