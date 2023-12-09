@@ -1,4 +1,6 @@
-﻿using FavouriteGamesBot.Db.DbConnector;
+﻿using System.Collections.Generic;
+using System.Linq;
+using FavouriteGamesBot.Db.DbConnector;
 using FavouriteGamesBot.Db.Models;
 using FavouriteGamesBot.Db.Repositories.Interfaces;
 

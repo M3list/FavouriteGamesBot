@@ -1,4 +1,5 @@
-﻿using FavouriteGamesBot.Bot;
+﻿using System;
+using FavouriteGamesBot.Bot;
 using FavouriteGamesBot.Bot.Router;
 using FavouriteGamesBot.Util;
 using FavouriteGamesBot.Util.String;

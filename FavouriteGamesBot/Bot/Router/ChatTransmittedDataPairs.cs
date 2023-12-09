@@ -1,4 +1,6 @@
-﻿namespace FavouriteGamesBot.Bot.Router;
+﻿using System.Collections.Generic;
+
+namespace FavouriteGamesBot.Bot.Router;
 
 public class ChatTransmittedDataPairs
 {

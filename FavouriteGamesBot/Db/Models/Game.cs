@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace FavouriteGamesBot.Db.Models;
 
 public partial class Game

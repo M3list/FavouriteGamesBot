@@ -1,4 +1,5 @@
-﻿using FavouriteGamesBot.Db.Models;
+﻿using System.Collections.Generic;
+using FavouriteGamesBot.Db.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FavouriteGamesBot.Db.DbConnector;

@@ -1,4 +1,5 @@
-﻿using FavouriteGamesBot.Service;
+﻿using System;
+using FavouriteGamesBot.Service;
 
 namespace FavouriteGamesBot.Bot.Router;
 

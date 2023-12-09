@@ -1,4 +1,6 @@
-﻿using FavouriteGamesBot.Util.String;
+﻿using System;
+using System.Threading;
+using FavouriteGamesBot.Util.String;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types.Enums;
